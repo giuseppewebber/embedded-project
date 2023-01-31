@@ -145,7 +145,7 @@ Through the code below, we are able to receive inputs via bluetooth and conseque
             keyboard.release(Key.enter)
 
         #quit
-            #bit_7 toggle to 1 only when the quit selection is confermed on the controller
+            #bit_7 toggle to 1 only when the quit selection is confirmed on the controller
         if((data & c.bit7) and not previous_bit_7):
             bt.close()
             keyboard.press(Key.alt)
@@ -168,7 +168,7 @@ Through the code below, we are able to receive inputs via bluetooth and conseque
 <a name="teamlist"></a>
 # <strong> Team Members </strong>
 
-The project was carried out by the collaboration of 3 people, mainly the work was made in common; 
+The project was carried out by the collaboration of 3 people, mainly the work was made in common; </br>
 in particular then each member took care of a specific part:
 
 Giuseppe Webber:
