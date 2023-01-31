@@ -1,23 +1,10 @@
 # <strong> Bluetooth Controller </strong>
-
+<a name="readme-top"></a>
 The goal of the project is to create a bluetooth controller that allows us to play 
 a computer game using a joystick or an accelerometer. </br>
 In our case we are playing Super Mario, but with a couple of adjustments in the code 
 we can potentially play any game that can run on python. 
 
-<summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#requirements">About The Project</a></li>
-    <li><a href="#built-with">Built With</a></li>
-    <li><a href="#installation">Installation</a></li>
-    <li><a href="#requirements">Requirements</a></li>
-    <li><a href="#folder-structure">Folder Structure</a></li>
-    <li><a href="#functionalities-explanation">Functionalities explanation</a></li>
-    <li><a href="#getting-started">Getting started</a></li>
-    <li><a href="#video-and-presentation">Video and Presentation</a></li>
-    <li><a href="#team-members">Team members</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
 
 # <strong> Table of Contents </strong>
 1. [Requirements](#requirements)
@@ -161,3 +148,4 @@ Alessandro Gianluca Cazzaniga:
 
 We didn't create Mario's level from scratch, but we took [this github project](https://github.com/justinmeister/Mario-Level-1) and modified a couple of things to be able to receive inputs via bluetooth
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
