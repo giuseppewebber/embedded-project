@@ -24,8 +24,8 @@ we can potentially play any game that can run on python.
 - [MSP432P401R](non trovo il link della Texas per la nostra scheda): which is the main board that process all the data;
 - [Educational booster pack MKII](https://www.ti.com/tool/BOOSTXL-EDUMKII?keyMatch=&tisearch=search-everything&usecase=hardware): which is the board with an LCD screen, a joystick, 
 buttons and the accelerometer that will act as the controller;
-- [ESP32](volendo si può aggiungere il link dal quale lo abbiamo comprato): which is the board able to output the bluetooth signal to the main computer;
-- Either a power-bank or a battery and a 5V power module to allow a stable power supply to the two boards;
+- [ESP32](https://www.amazon.it/AZDelivery-NodeMCU-Development-Arduino-gratuito/dp/B071P98VTG/ref=asc_df_B071P98VTG/?tag=googshopit-21&linkCode=df0&hvadid=194881236129&hvpos=&hvnetw=g&hvrand=2149836172945902890&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1008827&hvtargid=pla-367709801435&th=1): which is the board able to output the bluetooth signal to the main computer;
+- Either a power-bank or a battery plus a 5V power module to allow a stable power supply to the two boards;
 - 3 jumper wires, and eventually a breadboard to make more efficient connections;
 - A computer with a serial bluetooth port.
 
@@ -42,13 +42,25 @@ buttons and the accelerometer that will act as the controller;
 # <strong> Project Layout </strong> 
 
 <pre><code>Mario_bluetooth_controller
-├── 
-│	├── 
-│	├── 
-│	├── 
-├── 
-├── 
-└
+├── Mario-Level-1-master            # Python super Mario related files
+│	├── data                            # Files that run the actual game
+│	├── resources                       # Files that manages game sound and graphics
+│	└──  mario_level_1.py               # converts BT inputs into keyboard commands
+├── bluetooth_controller            # CCS related files
+│	├── LcdDriver                       # LCD driver lib
+│	├── constants.c(.h)                 # Gathers all the constants
+│	├── functions.c(.h)                 # Gathers all the functions
+│	├── images.c(.h)                    # Contains the 3 LCD images
+│	├── main.c                          # Main code
+│	├── setup.c(.h)                     # Initializes HW, ADC, Clock, UART and LCD
+│	└──  stateMachine.c(.h)             # Contains the state machine functions
+├── readme_img                      # Gathers the images needed for the readme
+│	├── Board_back.jpg                  # Front picture of the builded project
+│	├── Board_front.jpg                 # Picture of the connections between the boards
+│	└── FSM_scheme.jpg                  # Layout of the FSM
+├── README.md                       # Readme file
+└── UART_to_BT.ino                  # Code to program the ESP32 
+
 </code></pre>
 
 <a name="startlist"></a>
