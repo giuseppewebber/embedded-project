@@ -7,7 +7,7 @@ we can potentially play any game that can run on python.
 
 
 # <strong> Table of Contents </strong>
-1. <a href="#requirements-list">Requirements</a>
+1. <a href="#requirementslist">Requirements</a>
 2. [Project Layout](#project-layout)
 3. [Getting Started](#getting-started)
 4. [Code Highlights Explanation](#code-highlights-explanation)
@@ -15,8 +15,9 @@ we can potentially play any game that can run on python.
 6. [Team Members](#team-members)
 7. [References](#references)
 
+<a name="requirementslist"></a>
+# <strong> Requirements </strong> 
 
-# <strong> Requirements </strong> <a name="requirements list"></a>
 
 ## Hardware Requirements
 
