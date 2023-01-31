@@ -36,7 +36,7 @@ buttons and the accelerometer that will act as the controller;
 - Arduino to program the ESP32; 
 - CCS to run the MSP code;
 - An IDE with Python updated to pi-3.10.7 version;
-- Some libraries that are going to be included in the README later
+- Some libraries that are going to be included in the README later.
 
 <a name="layoutlist"></a>
 # <strong> Project Layout </strong> 
@@ -45,7 +45,7 @@ buttons and the accelerometer that will act as the controller;
 ├── Mario-Level-1-master            # Python super Mario related files
 │	├── data                            # Files that run the actual game
 │	├── resources                       # Files that manages game sound and graphics
-│	└──  mario_level_1.py               # converts BT inputs into keyboard commands
+│	└── mario_level_1.py                # Converts BT inputs into keyboard commands
 ├── bluetooth_controller            # CCS related files
 │	├── LcdDriver                       # LCD driver lib
 │	├── constants.c(.h)                 # Gathers all the constants
@@ -53,7 +53,7 @@ buttons and the accelerometer that will act as the controller;
 │	├── images.c(.h)                    # Contains the 3 LCD images
 │	├── main.c                          # Main code
 │	├── setup.c(.h)                     # Initializes HW, ADC, Clock, UART and LCD
-│	└──  stateMachine.c(.h)             # Contains the state machine functions
+│	└── stateMachine.c(.h)              # Contains the state machine functions
 ├── readme_img                      # Gathers the images needed for the readme
 │	├── Board_back.jpg                  # Front picture of the builded project
 │	├── Board_front.jpg                 # Picture of the connections between the boards
@@ -68,8 +68,8 @@ buttons and the accelerometer that will act as the controller;
 
 ## Hardware setup
 
-- Attach the 2 boards paying attention to the pin order
-- Connect as shown the main board to the power supply and to the ESP32 (after programming it)
+- Attach the 2 boards paying attention to the pin order;
+- Connect as shown the main board to the power supply and to the ESP32 (after programming it).
 
 ![Board_front](readme_img/Board_front.jpeg)
 ![Board_back](readme_img/Board_back.jpg)
@@ -85,7 +85,7 @@ buttons and the accelerometer that will act as the controller;
 
 ## Python Additions
 
-We decided to create a one-hot encoding to differentiate the different inputs that the user can tnsmit to the game.
+We decided to create a one-hot encoding to differentiate the various inputs that the user can transmit to the game.
 
 <pre><code>bit0 = 0b00000001       #bit0 action
 bit1 = 0b00000010       #bit1 jump
@@ -98,7 +98,7 @@ bit7 = 0b10000000       #bit7 quit
 </code></pre>
 
 
-Through the block of code below, we are able to receive inputs via bluetooth and consequently emulate the pressure of the keyboard keys, based on the value of the signal we receive.
+Through the code below, we are able to receive inputs via bluetooth and consequently emulate the pressure of the keyboard keys based on the value of the signal we receive.
 
 <pre><code>def thread_button(bt,keyboard):
     while True:
@@ -113,8 +113,8 @@ Through the block of code below, we are able to receive inputs via bluetooth and
         
         #same thing for "jump, left, right, down and up" inputs
 
-              #pause
-        #bit_6 toggle to 1 only when the state changes
+        #pause
+            #bit_6 toggle to 1 only when the state changes
         if((data & c.bit6) and not previous_bit_6):
             if(not c.isPauseTime):
                 keyboard.press(Key.esc)
@@ -127,7 +127,7 @@ Through the block of code below, we are able to receive inputs via bluetooth and
             keyboard.release(Key.enter)
 
         #quit
-        ##bit_7 toggle to 1 only when the quit selection is confermed on the controller
+            #bit_7 toggle to 1 only when the quit selection is confermed on the controller
         if((data & c.bit7) and not previous_bit_7):
             bt.close()
             keyboard.press(Key.alt)
@@ -149,7 +149,7 @@ Through the block of code below, we are able to receive inputs via bluetooth and
 # <strong> Team Members </strong>
 
 The project was carried out by the collaboration of 3 people, mainly the work was made in common; 
-in particular then each member took care of a specific part.
+in particular then each member took care of a specific part:
 
 Giuseppe Webber:
 
@@ -160,5 +160,5 @@ Alessandro Gianluca Cazzaniga:
 <a name="referencelist"></a>
 # <strong> References </strong>
 
-We didn't create Mario's level from scratch, but we took [this github project](https://github.com/justinmeister/Mario-Level-1) and modified a couple of things to be able to receive inputs via bluetooth
+We didn't create Mario's level from scratch, but we took [this github project](https://github.com/justinmeister/Mario-Level-1) and modified a couple of things to be able to receive inputs via bluetooth.
 
