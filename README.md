@@ -15,8 +15,8 @@ we can potentially play any game that can run on python.
 &nbsp;&nbsp;&nbsp;&nbsp; 3.1 <a href="#hwsetup">Hardware Setup</a></br>
 &nbsp;&nbsp;&nbsp;&nbsp; 3.2 <a href="#swsetup">Software Setup</a></br>
 4. <a href="#codelist">Code Highlights</a></br>
-&nbsp;&nbsp;&nbsp;&nbsp; 4.1 <a href="#pythonadd">Python Additions</a></br>
-&nbsp;&nbsp;&nbsp;&nbsp; 4.2 <a href="#ccsfsm">Ccs FSM</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp; 4.1 <a href="#ccsfsm">Ccs FSM</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp; 4.2 <a href="#pythonadd">Python Additions</a></br>
 5. <a href="#externalslist">Video and Presentation</a></br>
 6. <a href="#teamlist">Team Members</a></br>
 7. <a href="#referencelist">References</a></br>
