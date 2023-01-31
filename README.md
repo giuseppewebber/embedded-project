@@ -8,9 +8,15 @@ we can potentially play any game that can run on python.
 
 # <strong> Table of Contents </strong>
 1. <a href="#requirementslist">Requirements</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.1 <a href="#hwrequirements">Hardware Requirements</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.2 <a href="#swrequirements">Software Requirements</a></br>
 2. <a href="#layoutlist">Project Layout</a></br>
 3. <a href="#startlist">Getting Started</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp; 3.1 <a href="#hwsetup">Hardware Setup</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp; 3.2 <a href="#swsetup">Software Setup</a></br>
 4. <a href="#codelist">Code Highlights</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp; 4.1 <a href="#pythonadd">Python Additions</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp; 4.2 <a href="#ccsfsm">Ccs FSM</a></br>
 5. <a href="#externalslist">Video and Presentation</a></br>
 6. <a href="#teamlist">Team Members</a></br>
 7. <a href="#referencelist">References</a></br>
@@ -18,7 +24,7 @@ we can potentially play any game that can run on python.
 <a name="requirementslist"></a>
 # <strong> Requirements </strong> 
 
-
+<a name="hwrequirements"></a>
 ## Hardware Requirements
 
 - [MSP432P401R](non trovo il link della Texas per la nostra scheda): which is the main board that process all the data;
@@ -29,9 +35,8 @@ buttons and the accelerometer that will act as the controller;
 - 3 jumper wires, and eventually a breadboard to make more efficient connections;
 - A computer with a serial bluetooth port.
 
+<a name="swrequirements"></a>
 ## Software Requirements
-
-
 
 - Arduino to program the ESP32; 
 - CCS to run the MSP code;
@@ -66,6 +71,7 @@ buttons and the accelerometer that will act as the controller;
 <a name="startlist"></a>
 # <strong> Getting Started </strong>
 
+<a name="hwsetup"></a>
 ## Hardware setup
 
 - Attach the 2 boards paying attention to the pin order;
@@ -74,6 +80,7 @@ buttons and the accelerometer that will act as the controller;
 ![Board_front](readme_img/Board_front.jpeg)
 ![Board_back](readme_img/Board_back.jpg)
 
+<a name="swsetup"></a>
 ## Software setup
 
 - First of all program the ESP32 with the Arduino code, in order to do it be sure to have (libraries);
@@ -83,6 +90,10 @@ buttons and the accelerometer that will act as the controller;
 <a name="codelist"></a>
 # <strong> Code Highlights Explanation </strong>
 
+<a name="ccsfsm"></a>
+## Ccs FSM
+
+<a name="pythonadd"></a>
 ## Python Additions
 
 We decided to create a one-hot encoding to differentiate the various inputs that the user can transmit to the game.
