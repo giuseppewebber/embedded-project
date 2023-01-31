@@ -5,7 +5,7 @@ a computer game using a joystick or an accelerometer. </br>
 In our case we are playing Super Mario, but with a couple of adjustments in the code 
 we can potentially play any game that can run on python. 
 
-
+<a name="index"></a>
 # <strong> Table of Contents </strong>
 1. <a href="#requirementslist">Requirements</a></br>
 &nbsp;&nbsp;&nbsp;&nbsp; 1.1 <a href="#hwrequirements">Hardware Requirements</a></br>
@@ -65,8 +65,9 @@ buttons and the accelerometer that will act as the controller;
 │	└── FSM_scheme.jpg                  # Layout of the FSM
 ├── README.md                       # Readme file
 └── UART_to_BT.ino                  # Code to program the ESP32 
-
 </code></pre>
+
+<p align="right"><a href="#index">index</a></p>
 
 <a name="startlist"></a>
 # <strong> Getting Started </strong>
@@ -87,11 +88,17 @@ buttons and the accelerometer that will act as the controller;
 - Plug the MSP432 to the computer and program it via CCS, be sure to have (libraries);
 - Open the Python code, install the following libraries (), launch the game and be ready to play.
 
+<p align="right"><a href="#index">index</a></p>
+
 <a name="codelist"></a>
 # <strong> Code Highlights Explanation </strong>
 
 <a name="ccsfsm"></a>
 ## Ccs FSM
+
+![Board_front](readme_img/FSM_scheme.jpg)
+
+<p align="right"><a href="#index">index</a></p>
 
 <a name="pythonadd"></a>
 ## Python Additions
@@ -150,6 +157,8 @@ Through the code below, we are able to receive inputs via bluetooth and conseque
         previous_bit_6 = data & c.bit6
         previous_bit_7 = data & c.bit7</code></pre>  
 
+<p align="right"><a href="#index">index</a></p>
+
 <a name="externalslist"></a>
 # <strong> Video and Presentation </strong>
 
@@ -172,4 +181,6 @@ Alessandro Gianluca Cazzaniga:
 # <strong> References </strong>
 
 We didn't create Mario's level from scratch, but we took [this github project](https://github.com/justinmeister/Mario-Level-1) and modified a couple of things to be able to receive inputs via bluetooth.
+
+<p align="right"><a href="#index">index</a></p>
 
