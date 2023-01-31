@@ -7,13 +7,13 @@ we can potentially play any game that can run on python.
 
 
 # <strong> Table of Contents </strong>
-1. <a href="#requirementslist">Requirements</a>
-2. [Project Layout](#project-layout)
-3. [Getting Started](#getting-started)
-4. [Code Highlights Explanation](#code-highlights-explanation)
-5. [Video and Presentation](#video-and-presentation)
-6. [Team Members](#team-members)
-7. [References](#references)
+1. <a href="#requirementslist">Requirements</a></br>
+2. <a href="#layoutlist">Project Layout</a></br>
+3. <a href="#startlist">Getting Started</a></br>
+4. <a href="#codelist">Code Highlights</a></br>
+5. <a href="#externalslist">Video and Presentation</a></br>
+6. <a href="#teamlist">Team Members</a></br>
+7. <a href="#referencelist">References</a></br>
 
 <a name="requirementslist"></a>
 # <strong> Requirements </strong> 
@@ -38,7 +38,7 @@ buttons and the accelerometer that will act as the controller;
 - An IDE with Python updated to pi-3.10.7 version;
 - Some libraries that are going to be included in the README later
 
-
+<a name="layoutlist"></a>
 # <strong> Project Layout </strong> 
 
 <pre><code>Mario_bluetooth_controller
@@ -51,7 +51,7 @@ buttons and the accelerometer that will act as the controller;
 └
 </code></pre>
 
-
+<a name="startlist"></a>
 # <strong> Getting Started </strong>
 
 ## Hardware setup
@@ -59,8 +59,8 @@ buttons and the accelerometer that will act as the controller;
 - Attach the 2 boards paying attention to the pin order
 - Connect as shown the main board to the power supply and to the ESP32 (after programming it)
 
-![Board_front](/Board_front.jpeg)
-![Board_back](/Board_back.jpg)
+![Board_front](readme_img/Board_front.jpeg)
+![Board_back](readme_img/Board_back.jpg)
 
 ## Software setup
 
@@ -68,7 +68,7 @@ buttons and the accelerometer that will act as the controller;
 - Plug the MSP432 to the computer and program it via CCS, be sure to have (libraries);
 - Open the Python code, install the following libraries (), launch the game and be ready to play.
 
-
+<a name="codelist"></a>
 # <strong> Code Highlights Explanation </strong>
 
 ## Python Additions
@@ -127,13 +127,13 @@ Through the block of code below, we are able to receive inputs via bluetooth and
         previous_bit_6 = data & c.bit6
         previous_bit_7 = data & c.bit7</code></pre>  
 
-
+<a name="externalslist"></a>
 # <strong> Video and Presentation </strong>
 
 [Presentation slides](inserire link pp google) </p>
 [YouTube demo video](inserire link yt)</p>
 
-
+<a name="teamlist"></a>
 # <strong> Team Members </strong>
 
 The project was carried out by the collaboration of 3 people, mainly the work was made in common; 
@@ -145,6 +145,7 @@ Givanni Solfa:
 
 Alessandro Gianluca Cazzaniga:
 
+<a name="referencelist"></a>
 # <strong> References </strong>
 
 We didn't create Mario's level from scratch, but we took [this github project](https://github.com/justinmeister/Mario-Level-1) and modified a couple of things to be able to receive inputs via bluetooth
