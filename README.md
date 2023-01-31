@@ -5,6 +5,19 @@ a computer game using a joystick or an accelerometer. </br>
 In our case we are playing Super Mario, but with a couple of adjustments in the code 
 we can potentially play any game that can run on python. 
 
+<summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#requirements">About The Project</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#folder-structure">Folder Structure</a></li>
+    <li><a href="#functionalities-explanation">Functionalities explanation</a></li>
+    <li><a href="#getting-started">Getting started</a></li>
+    <li><a href="#video-and-presentation">Video and Presentation</a></li>
+    <li><a href="#team-members">Team members</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
 
 # <strong> Table of Contents </strong>
 1. [Requirements](#requirements)
