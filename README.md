@@ -15,7 +15,7 @@ we can potentially play any game that can run on python.
 &nbsp;&nbsp;&nbsp;&nbsp; 3.1 <a href="#hwsetup">Hardware Setup</a></br>
 &nbsp;&nbsp;&nbsp;&nbsp; 3.2 <a href="#swsetup">Software Setup</a></br>
 4. <a href="#codelist">Code Highlights</a></br>
-&nbsp;&nbsp;&nbsp;&nbsp; 4.1 <a href="#ccsfsm">Ccs FSM</a></br>
+&nbsp;&nbsp;&nbsp;&nbsp; 4.1 <a href="#ccsfsm">CCS FSM</a></br>
 &nbsp;&nbsp;&nbsp;&nbsp; 4.2 <a href="#pythonadd">Python Additions</a></br>
 5. <a href="#externalslist">Video and Presentation</a></br>
 6. <a href="#teamlist">Team Members</a></br>
@@ -27,7 +27,7 @@ we can potentially play any game that can run on python.
 <a name="hwrequirements"></a>
 ## Hardware Requirements
 
-- [MSP432P401R](non trovo il link della Texas per la nostra scheda): which is the main board that process all the data;
+- [MSP432P401R](https://www.ti.com/lit/ds/slas826e/slas826e.pdf): which is the main board that process all the data;
 - [Educational booster pack MKII](https://www.ti.com/tool/BOOSTXL-EDUMKII?keyMatch=&tisearch=search-everything&usecase=hardware): which is the board with an LCD screen, a joystick, 
 buttons and the accelerometer that will act as the controller;
 - [ESP32](https://www.amazon.it/AZDelivery-NodeMCU-Development-Arduino-gratuito/dp/B071P98VTG/ref=asc_df_B071P98VTG/?tag=googshopit-21&linkCode=df0&hvadid=194881236129&hvpos=&hvnetw=g&hvrand=2149836172945902890&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1008827&hvtargid=pla-367709801435&th=1): which is the board able to output the bluetooth signal to the main computer;
@@ -41,7 +41,7 @@ buttons and the accelerometer that will act as the controller;
 - Arduino to program the ESP32; 
 - CCS to run the MSP code;
 - An IDE with Python updated to pi-3.10.7 version;
-- Some libraries that are going to be included in the README later.
+- Some libraries that are going to be included in the README <a href="#swsetup">later.</a></br>
 
 <a name="layoutlist"></a>
 # <strong> Project Layout </strong> 
@@ -84,8 +84,8 @@ buttons and the accelerometer that will act as the controller;
 <a name="swsetup"></a>
 ## Software setup
 
-- First of all program the ESP32 with the Arduino code, in order to do it be sure to have (libraries);
-- Plug the MSP432 to the computer and program it via CCS, be sure to have (libraries);
+- First of all program the ESP32 with the Arduino code, in order to do it be sure to have the following libraries: HardwareSerial and BluetoothSerial;
+- Plug the MSP432 to the computer and program it via CCS, make sure to install properly the DriverLib;
 - Open the Python code, install the following libraries (), launch the game and be ready to play.
 
 <p align="right"><a href="#index">index</a></p>
@@ -94,7 +94,15 @@ buttons and the accelerometer that will act as the controller;
 # <strong> Code Highlights Explanation </strong>
 
 <a name="ccsfsm"></a>
-## Ccs FSM
+## CCS FSM
+
+The following image represents the main structure of the core FSM that controls the various stages of the game: </p>
+
+INIT: Initial state of the FSM, here the LCD screen displays the initial menu with the sentence "press a button to start". To exit this state you have to press either buttons of the board; </p>
+SELECTION: In this stage you are in the first selection menu, you can decide to play either with the joystick or the accelerometer. To exit this phase you can select the exit option or the continue option; </p>
+GAME: This is the stage where you are actually playing the game, while the LCD screen displays a static image of Mario. To exit this phase you have to press the joystick button to enter the pause menu;</p>
+PAUSE: A very similar stage to the selection menu, you can again decide to exit/continue playing or also change the gamemode (from acc to joystick or vice versa). </br>
+
 
 ![Board_front](readme_img/FSM_scheme.jpg)
 
@@ -162,8 +170,8 @@ Through the code below, we are able to receive inputs via bluetooth and conseque
 <a name="externalslist"></a>
 # <strong> Video and Presentation </strong>
 
-[Presentation slides](inserire link pp google) </p>
-[YouTube demo video](inserire link yt)</p>
+[Presentation slides](https://docs.google.com/presentation/d/1Qpzy2kaDjex3hpwY10Ic5bjc5NFrYW04lYs_KVzTvvE/edit#slide=id.g2042e0ed896_0_313) </p>
+[YouTube demo video](https://www.youtube.com/watch?v=4A2qw3KP-wk)</p>
 
 <a name="teamlist"></a>
 # <strong> Team Members </strong>
@@ -171,16 +179,18 @@ Through the code below, we are able to receive inputs via bluetooth and conseque
 The project was carried out by the collaboration of 3 people, mainly the work was made in common; </br>
 in particular then each member took care of a specific part:
 
-Giuseppe Webber:
+Giuseppe Webber: ADC configuration
 
-Givanni Solfa:
+Giovanni Solfa: Python code
 
-Alessandro Gianluca Cazzaniga:
+Alessandro Gianluca Cazzaniga: LCD screen
 
 <a name="referencelist"></a>
 # <strong> References </strong>
 
-We didn't create Mario's level from scratch, but we took [this github project](https://github.com/justinmeister/Mario-Level-1) and modified a couple of things to be able to receive inputs via bluetooth.
+We didn't create Mario's level from scratch, but we took [this github project](https://github.com/justinmeister/Mario-Level-1) and modified a couple of things to be able to receive inputs via bluetooth. </p>
+
+We used [this website](https://notisrac.github.io/FileToCArray/) to create the images used in the different LCD screens.
 
 <p align="right"><a href="#index">index</a></p>
 
