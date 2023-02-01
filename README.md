@@ -31,7 +31,7 @@ we can potentially play any game that can run on python.
 - [Educational booster pack MKII](https://www.ti.com/tool/BOOSTXL-EDUMKII?keyMatch=&tisearch=search-everything&usecase=hardware): which is the board with an LCD screen, a joystick, 
 buttons and the accelerometer that will act as the controller;
 - [ESP32](https://www.amazon.it/AZDelivery-NodeMCU-Development-Arduino-gratuito/dp/B071P98VTG/ref=asc_df_B071P98VTG/?tag=googshopit-21&linkCode=df0&hvadid=194881236129&hvpos=&hvnetw=g&hvrand=2149836172945902890&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1008827&hvtargid=pla-367709801435&th=1): which is the board able to output the bluetooth signal to the main computer;
-- Either a power-bank or a battery plus a 5V power module to allow a stable power supply to the two boards;
+- A power-bank to allow a stable power supply to the two boards;
 - 3 jumper wires, and eventually a breadboard to make more efficient connections;
 - A computer with a serial bluetooth port.
 
@@ -40,7 +40,7 @@ buttons and the accelerometer that will act as the controller;
 
 - Arduino to program the ESP32; 
 - CCS to run the MSP code;
-- An IDE with Python updated to pi-3.10.7 version;
+- An IDE with Python updated to Python-3.10.7 version;
 - Some libraries that are going to be included in the README <a href="#swsetup">later.</a></br>
 
 <a name="layoutlist"></a>
@@ -86,7 +86,7 @@ buttons and the accelerometer that will act as the controller;
 
 - First of all program the ESP32 with the Arduino code, in order to do it be sure to have the following libraries: HardwareSerial and BluetoothSerial;
 - Plug the MSP432 to the computer and program it via CCS, make sure to install properly the DriverLib;
-- Open the Python code, install the following libraries (), launch the game and be ready to play.
+- Open the Python code, install the following libraries (threading, serial, pynput, pygame), launch the game and be ready to play.
 
 <p align="right"><a href="#index">index</a></p>
 
@@ -98,7 +98,7 @@ buttons and the accelerometer that will act as the controller;
 
 The following image represents the main structure of the core FSM that controls the various stages of the game: </p>
 
-INIT: Initial state of the FSM, here the LCD screen displays the initial menu with the sentence "press a button to start". To exit this state you have to press either buttons of the board; </p>
+INIT: Initial state of the FSM, here the LCD screen displays the initial menu with the sentence "press a button to start". To exit this state you have to press either buttons on the board; </p>
 SELECTION: In this stage you are in the first selection menu, you can decide to play either with the joystick or the accelerometer. To exit this phase you can select the exit option or the continue option; </p>
 GAME: This is the stage where you are actually playing the game, while the LCD screen displays a static image of Mario. To exit this phase you have to press the joystick button to enter the pause menu;</p>
 PAUSE: A very similar stage to the selection menu, you can again decide to exit/continue playing or also change the gamemode (from acc to joystick or vice versa). </br>
@@ -111,7 +111,7 @@ PAUSE: A very similar stage to the selection menu, you can again decide to exit/
 <a name="pythonadd"></a>
 ## Python Additions
 
-We decided to create a one-hot encoding to differentiate the various inputs that the user can transmit to the game.
+We decided to create a one-hot encoding to differentiate the various inputs that the controller can transmit to the computer.
 
 <pre><code>bit0 = 0b00000001       #bit0 action
 bit1 = 0b00000010       #bit1 jump
@@ -176,7 +176,7 @@ Through the code below, we are able to receive inputs via bluetooth and conseque
 <a name="teamlist"></a>
 # <strong> Team Members </strong>
 
-The project was carried out by the collaboration of 3 people, mainly the work was made in common; </br>
+The project was carried out by the collaboration of 3 people, mainly the work was made in common, </br>
 in particular then each member took care of a specific part:
 
 Giuseppe Webber: ADC configuration
@@ -190,7 +190,7 @@ Alessandro Gianluca Cazzaniga: LCD screen
 
 We didn't create Mario's level from scratch, but we took [this github project](https://github.com/justinmeister/Mario-Level-1) and modified a couple of things to be able to receive inputs via bluetooth. </p>
 
-We used [this website](https://notisrac.github.io/FileToCArray/) to create the images used in the different LCD screens.
+We also used [this website](https://notisrac.github.io/FileToCArray/) to create the images used in the different LCD screens.
 
 <p align="right"><a href="#index">index</a></p>
 
